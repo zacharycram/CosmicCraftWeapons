@@ -1,0 +1,11 @@
+messages:
+  prefix: "&c&lCosmic&8&lWeapons &6&l> "
+  no_perm: "%prefix%&cYou do not have permission."
+  offline_player: "%prefix%&cError: %player% is not online."
+  invalid_item: "%prefix%&cThat is an invalid item name."
+  inventory_full: "%prefix%&cError: You couldn't receive your item, your inventory was full!"
+  received_item: "%prefix%&aYou've received a legendary weapon!"
+  gave_item: "%prefix%&aYou gave a legendary weapon to %player%!"
+  main_command_help:
+    - "&c&lCosmic&8&lWeapons &6&lCommand Help:"
+    - "&7/weapons give <player> <item> &8- &fGive an item to a player."

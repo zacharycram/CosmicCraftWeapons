@@ -1,0 +1,24 @@
+config:
+  # Should all weapons given have an attached player name and timestamp?
+  enable_weapon_information_lore: true
+
+  # Time format
+  date: "dd/MM/yy"
+  time: "HH:mm:ss"
+
+  # Define the lore here.
+  append_weapon_lore:
+    - "&a%player% %date%#%time%"
+    - "&cThis is the next lore line."
+
+  pyro_dmg: 3.14 #funny pi
+  db_dmg: 2.0
+  db_lifesteal: 1.0 # 2.0 = 1 heart life steal
+
+  # Define the item aliases for the give command
+  pyro_aliases:
+    - pyro
+    - pyroaxe
+  db_aliases:
+    - db
+    - deathbringer

@@ -1,0 +1,14 @@
+name: ${project.name}
+author: ${project.organization.name}
+version: ${project.version}
+main: ${project.groupId}.cosmiccraftweapons.${project.artifactId}Plugin
+
+commands:
+  weapons:
+    aliases: [ccweapons, cosmicweapons, cosmiccraftweapons]
+    description: Plugin main command.
+
+permissions:
+  weapons.use:
+    description: Permission to use plugin main command.
+    default: op
