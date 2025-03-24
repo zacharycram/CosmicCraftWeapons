@@ -12,3 +12,6 @@ permissions:
   weapons.use:
     description: Permission to use plugin main command.
     default: op
+  weapons.reload:
+    description: Permission to reload the plugin.
+    default: op

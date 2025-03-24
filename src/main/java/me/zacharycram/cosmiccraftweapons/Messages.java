@@ -12,6 +12,7 @@ public enum Messages {
     INVENTORY_FULL("messages.inventory_full"),
     RECEIVED_ITEM("messages.received_item"),
     GAVE_ITEM("messages.gave_item"),
+    PLUGIN_RELOAD("messages.plugin_reload"),
     ;
 
     private final String path;

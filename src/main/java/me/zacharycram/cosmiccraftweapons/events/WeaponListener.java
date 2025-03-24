@@ -30,6 +30,7 @@ public class WeaponListener implements Listener {
     @EventHandler
     public void onEntityDamage(EntityDamageByEntityEvent event) {
         Entity damager = event.getDamager();
+        Entity entity = event.getEntity();
         if (!(damager instanceof Player)) return;
 
         Player attacker = (Player) damager;
@@ -39,8 +40,8 @@ public class WeaponListener implements Listener {
             for (String lore : item.getItemMeta().getLore()) { // TODO dynamic?
                 if (StringUtils.stripColoredText(lore).equals("I come from the Iron Hills")) {
                     event.setDamage(event.getDamage() * pyroDmg);
-                    world.playSound(attacker.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0F, 0.0F);
-                    world.playEffect(attacker.getLocation(), Effect.ZOMBIE_DESTROY_DOOR, 1);
+                    world.playSound(entity.getLocation(), Sound.BLOCK_ANVIL_LAND, 1.0F, 0.0F);
+                    world.playEffect(entity.getLocation(), Effect.ZOMBIE_DESTROY_DOOR, 1);
                 }
                 if (StringUtils.stripColoredText(lore).equals("Deathbringer")) {
                     event.setDamage(event.getDamage() * dbDmg);

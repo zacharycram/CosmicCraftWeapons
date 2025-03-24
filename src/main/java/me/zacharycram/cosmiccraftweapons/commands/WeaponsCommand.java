@@ -53,6 +53,17 @@ public class WeaponsCommand implements CommandExecutor {
             }
         }
 
+        if (args.length == 1) {
+            if (!sender.hasPermission("weapons.reload")) {
+                sender.sendMessage(Messages.NO_PERMISSION.get(messagesYml));
+                return true;
+            }
+
+            Bukkit.getPluginManager().disablePlugin(plugin);
+            Bukkit.getPluginManager().enablePlugin(plugin);
+            sender.sendMessage(Messages.PLUGIN_RELOAD.get(messagesYml));
+        }
+
         if (args.length == 3) {
             if (args[0].equalsIgnoreCase("give")) {
                 Player recipient = Bukkit.getPlayer(args[1]);

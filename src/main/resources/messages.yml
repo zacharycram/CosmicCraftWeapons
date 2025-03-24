@@ -6,6 +6,8 @@ messages:
   inventory_full: "%prefix%&cError: You couldn't receive your item, your inventory was full!"
   received_item: "%prefix%&aYou've received a legendary weapon!"
   gave_item: "%prefix%&aYou gave a legendary weapon to %player%!"
+  plugin_reload: "%prefix%&aPlugin successfully reloaded."
   main_command_help:
     - "&c&lCosmic&8&lWeapons &6&lCommand Help:"
     - "&7/weapons give <player> <item> &8- &fGive an item to a player."
+    - "&7/weapons reload &8- &fReload the plugin."
