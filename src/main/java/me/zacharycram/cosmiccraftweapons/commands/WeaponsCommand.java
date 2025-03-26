@@ -131,7 +131,7 @@ public class WeaponsCommand implements CommandExecutor {
         HashMap<Integer, ItemStack> leftOverItems = player.getInventory().addItem(itemBuilder.build());
         if (!leftOverItems.isEmpty()) {
             player.sendMessage(Messages.INVENTORY_FULL.get(plugin.getMessagesYML().getConfig("messages.yml")));
-            // maybe add a GUI for players to claim their items in the future
+            plugin.getPlayerDataUtil().addToStorage(player.getUniqueId(), leftOverItems.values());
         } else {
             player.sendMessage(Messages.RECEIVED_ITEM.get(plugin.getMessagesYML().getConfig("messages.yml")));
         }

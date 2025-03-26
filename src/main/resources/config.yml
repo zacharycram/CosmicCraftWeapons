@@ -22,3 +22,44 @@ config:
   db_aliases:
     - db
     - deathbringer
+
+  # Claim section (for when weapons are given to a target's full inventory)
+  claim:
+    # How long, in milliseconds, for reminders to be sent
+    delay: 30000
+    alert_title:
+      # Title placeholders:
+      # %player% - player name
+      # %amount% - Amount of items
+      title: "&7Click the message in chat %player%"
+      subtitle: "&7You have &a&l%amount% &7items to claim"
+      fade_in: 10
+      stay: 40
+      fade_out: 10
+    alert_message: # Supports mini message
+      - ""
+      - "<hover:show_text:'<red>What are you waiting for...'><click:run_command:/claim><gold>Click here to open the claim menu</gold>"
+      - ""
+
+    gui:
+      # Name of the claim GUI
+      title: "&dClaim Items"
+
+      # Item shown if player has pending claim
+      pending_display:
+        material: INK_SACK
+        damage: 10
+        name: "&a&lCLICK TO CLAIM"
+        lore:
+          - "&7Click here to claim your items!"
+          - ""
+          - "&7You must have at least &a&l%amount%"
+          - "&7free slots in your inventory!"
+        glow: true
+      none_display:
+        material: INK_SACK
+        damage: 8
+        name: "&7&lNOTHING TO CLAIM..."
+        lore:
+          - "&7You don't have anything to claim for now."
+        glow: true

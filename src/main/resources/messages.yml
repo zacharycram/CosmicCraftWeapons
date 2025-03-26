@@ -1,5 +1,6 @@
 messages:
   prefix: "&c&lCosmic&8&lWeapons &6&l> "
+  console: "%prefix%&cYou can't run this command from console."
   no_perm: "%prefix%&cYou do not have permission."
   offline_player: "%prefix%&cError: %player% is not online."
   invalid_item: "%prefix%&cThat is an invalid item name."
@@ -7,6 +8,8 @@ messages:
   received_item: "%prefix%&aYou've received a legendary weapon!"
   gave_item: "%prefix%&aYou gave a legendary weapon to %player%!"
   plugin_reload: "%prefix%&aPlugin successfully reloaded."
+  claimed_pending: "%prefix%&aYou've claimed &a&l%amount% &apending weapons!"
+  no_pending: "%prefix%&cError: You do not have any pending weapons to claim."
   main_command_help:
     - "&c&lCosmic&8&lWeapons &6&lCommand Help:"
     - "&7/weapons give <player> <item> &8- &fGive an item to a player."

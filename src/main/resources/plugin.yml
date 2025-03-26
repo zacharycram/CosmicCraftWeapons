@@ -7,6 +7,9 @@ commands:
   weapons:
     aliases: [ccweapons, cosmicweapons, cosmiccraftweapons]
     description: Plugin main command.
+  claim:
+    aliases: [claimitem, claimitems]
+    description: Claim command.
 
 permissions:
   weapons.use:
@@ -14,4 +17,7 @@ permissions:
     default: op
   weapons.reload:
     description: Permission to reload the plugin.
+    default: op
+  weapons.claim:
+    description: Permission to claim items.
     default: op

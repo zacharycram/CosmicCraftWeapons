@@ -2,6 +2,7 @@ package me.zacharycram.cosmiccraftweapons.utility;
 
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
+import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
@@ -23,6 +24,10 @@ public class ItemBuilder { // remove unnecessary methods
 
     public ItemBuilder(Material m, int amount) {
         this.itemStack = new ItemStack(m, amount);
+    }
+
+    public ItemBuilder(Material m, int amount, byte durability) {
+        this.itemStack = new ItemStack(m, amount, durability);
     }
 
     public ItemBuilder setName(String name) {
@@ -75,6 +80,16 @@ public class ItemBuilder { // remove unnecessary methods
         ItemMeta im = this.itemStack.getItemMeta();
         im.setLore(lore);
         this.itemStack.setItemMeta(im);
+        return this;
+    }
+
+    public ItemBuilder setGlow(boolean glow) {
+        if (glow) {
+            ItemMeta im = this.itemStack.getItemMeta();
+            im.addEnchant(Enchantment.DURABILITY, 1, true);
+            im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+            this.itemStack.setItemMeta(im);
+        }
         return this;
     }
 
